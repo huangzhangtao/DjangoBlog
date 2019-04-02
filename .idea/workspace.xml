@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d7a5fca-d888-4e54-a5e5-b1df51c99c37" name="Default Changelist" comment="" />
+    <list default="true" id="7d7a5fca-d888-4e54-a5e5-b1df51c99c37" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoBlog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoBlog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinfig/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinfig/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinfig/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinfig/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinfig/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinfig/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinfig/views.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DjangoBlog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="-816">
+              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-477">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,25 +59,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comment/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="291">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cinfig/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -64,6 +77,7 @@
         <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/comment/models.py" />
         <option value="$PROJECT_DIR$/cinfig/models.py" />
+        <option value="$PROJECT_DIR$/config/models.py" />
         <option value="$PROJECT_DIR$/DjangoBlog/settings.py" />
       </list>
     </option>
@@ -74,6 +88,7 @@
     <option name="width" value="715" />
     <option name="height" value="386" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -89,6 +104,16 @@
             <path>
               <item name="DjangoBlog" type="b2602c69:ProjectViewProjectNode" />
               <item name="DjangoBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DjangoBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DjangoBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DjangoBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DjangoBlog" type="462c0819:PsiDirectoryNode" />
               <item name="DjangoBlog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -99,6 +124,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/CloneProject/typeidea" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -157,17 +183,18 @@
       <workItem from="1554108198594" duration="527000" />
       <workItem from="1554120535794" duration="282000" />
       <workItem from="1554128114532" duration="459000" />
-      <workItem from="1554192841994" duration="3551000" />
+      <workItem from="1554192841994" duration="4958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5842000" />
+    <option name="totallyTimeSpent" value="7249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1847" height="859" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14261839" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14214325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -181,9 +208,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.41828254" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32897604" />
-      <window_info anchor="bottom" id="manage.py@DjangoBlog" order="13" weight="0.30718955" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.95804197" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32867134" />
+      <window_info active="true" anchor="bottom" id="manage.py@DjangoBlog" order="13" visible="true" weight="0.23929748" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -248,6 +275,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cinfig/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-704">
@@ -258,27 +295,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comment/models.py">
+    <entry file="file://$PROJECT_DIR$/config/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cinfig/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="-477">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/comment/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DjangoBlog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="-816">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
         </state>
       </provider>
     </entry>
