@@ -1,10 +1,14 @@
+import  requests
+
 from django.contrib import admin
+from django.contrib.auth import get_permission_codename
 from django.urls import reverse
 from django.utils.html import format_html
 
 from .models import Post, Category, Tag
 
 from .adminforms import PostAdminForm
+from DjangoBlog.custom_site import custom_site
 
 class PostInline(admin.TabularInline):
     fields = ('title', 'desc')
@@ -52,7 +56,9 @@ class CateGoryOwnerFilter(admin.SimpleListFilter):
             return queryset.filter(category_id=self.value())
         return queryset
 
-@admin.register(Post)
+PERMISSION_API = "http://permission.sso.com/has_perm?user={}&perm_code={}"
+
+@admin.register(Post, site=custom_site)
 class PostAdmin(admin.ModelAdmin):
     list_display = [
         'title', 'category', 'status',
@@ -103,7 +109,7 @@ class PostAdmin(admin.ModelAdmin):
     def operator(self, obj):
         return format_html(
             '<a href="{}">编辑</a>',
-            reverse('admin:blog_post_change', args=(obj.id,))
+            reverse('cus_admin:blog_post_change', args=(obj.id,))
         )
     operator.short_description = '操作'
 
@@ -120,5 +126,14 @@ class PostAdmin(admin.ModelAdmin):
             'all' : ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"),
         }
         js = ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js")
-
+    # def has_add_permission(self, request):
+    #     opts = self.opts
+    #     codename = get_permission_codename('add', opts)
+    #     perm_code = "%s.%s" % (opts.app_lable, codename)
+    #     resp = requests.get(PERMISSION_API.format(requests.user.username, perm_code))
+    #     if resp.status_code == 20:
+    #         return True
+    #     else:
+    #         return False
+    #
 
