@@ -58,7 +58,7 @@ class CateGoryOwnerFilter(admin.SimpleListFilter):
 
 PERMISSION_API = "http://permission.sso.com/has_perm?user={}&perm_code={}"
 
-@admin.register(Post, site=custom_site)
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = [
         'title', 'category', 'status',
@@ -109,7 +109,7 @@ class PostAdmin(admin.ModelAdmin):
     def operator(self, obj):
         return format_html(
             '<a href="{}">编辑</a>',
-            reverse('cus_admin:blog_post_change', args=(obj.id,))
+            reverse('admin:blog_post_change', args=(obj.id,))
         )
     operator.short_description = '操作'
 
@@ -120,12 +120,13 @@ class PostAdmin(admin.ModelAdmin):
     def get_queryset(self, request):
         qs = super(PostAdmin, self).get_queryset(request)
         return qs.filter(owner=request.user)
+    #
+    # class Media:
+    #     css = {
+    #         'all' : ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"),
+    #     }
+    #     js = ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js")
 
-    class Media:
-        css = {
-            'all' : ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"),
-        }
-        js = ("https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js")
     # def has_add_permission(self, request):
     #     opts = self.opts
     #     codename = get_permission_codename('add', opts)
