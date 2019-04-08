@@ -55,10 +55,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'DjangoBlog.urls'
 
+STATIC_ROOT = '/tmp/static'
+
+STATIC_URL = '/static/'
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'DjangoBlog/themes/bootstrap/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
