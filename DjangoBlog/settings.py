@@ -40,8 +40,16 @@ INSTALLED_APPS = [
     'blog',
     'config',
     'comment',
+    'ckeditor',
+    'ckeditor_uploader',
+    'rest_framework',
+    'dal',
+    'dal_select2',
+
 
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,7 +63,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'DjangoBlog.urls'
 
-STATIC_ROOT = '/tmp/static'
 
 STATIC_URL = '/static/'
 
@@ -132,4 +139,39 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+        'tabSpaces': 4,
+        'extraPlugins': 'codesnippet',
+    },
+}
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+CKEDITOR_UPLOAD_PATH = "article_images"
+
+DATABASES_FILE_STORAGE = 'DjangoBlog.storage.WatermarkStorage'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2,
+}
+
+REDIS_URL = '127.0.0.1:6379:1'
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': REDIS_URL,
+        'TIMEOUT': 300,
+        'OPTIONS': {
+            # 'PASSWORD': '<对应密码>',
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            'PARSER_CLASS': 'redis.connection.HiredisParser',
+        },
+        'CONNECTION_POOL_CLASS': 'redis.connection.BlockingConnectionPool',
+    }
+}

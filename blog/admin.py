@@ -1,5 +1,3 @@
-import  requests
-
 from django.contrib import admin
 from django.contrib.auth import get_permission_codename
 from django.urls import reverse
@@ -15,6 +13,7 @@ class PostInline(admin.TabularInline):
     extra = 1
     model = Post
 
+
 @admin.register(Category)
 class  CategoryAdmin(admin.ModelAdmin):
     inlines = [PostInline]
@@ -29,6 +28,7 @@ class  CategoryAdmin(admin.ModelAdmin):
         return obj.post_set.count()
 
     post_count.short_description = '文章数量'
+
 
 
 @admin.register(Tag)
@@ -57,6 +57,8 @@ class CateGoryOwnerFilter(admin.SimpleListFilter):
         return queryset
 
 PERMISSION_API = "http://permission.sso.com/has_perm?user={}&perm_code={}"
+
+
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):

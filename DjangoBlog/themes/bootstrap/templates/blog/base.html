@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en">
+{% block extra_head %}
+{% endblock %}
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}首页{% endblock %}- typeidea博客系统</title>
+    <title>{% block title %}首页{% endblock %}- HZT-DjangoBlog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css">
 
@@ -25,22 +27,26 @@
               </li>
             {% endfor %}
             </ul>
-            <form class="form-inline my-2 my-lg-0"  method="get">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline" action='/search/'  method="GET">
+                <input class="form-control mr-sm-2" type="search" name='keyword' placeholder="Search" aria-label="Search" value="{{ keyword }}">
               <button class="btn btn-outline-success" type="submit">搜索</button>
             </form>
           </div>
         </nav>
         <div class="jumbotron">
-            <h1 class="display-4">Typeidea</h1>
+            <h1 class="display-4">DjangoBlog</h1>
             <p class="lead">基于Django的多人博客系统</p>
         </div>
 	</div>
+
+
 	<div class="container main">
         <div class="row">
             <div class="col-9 post-list">
+
             {% block main %}
             {% endblock %}
+
             </div>
             <div class="col-3">
                 {% block sidebar %}
@@ -58,6 +64,7 @@
             </div>
         </div>
     </div>
+
 
     <footer class="footer">
         {% block footer %}
